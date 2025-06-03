@@ -42,8 +42,9 @@ app.use("/api", GuideContactRouter)
 app.use("/api", consultantRoutes)
 app.use("/api", ReachUsRouter)
 app.use("/api", JoinGuideRouter)
-
-
+app.get("/test", (req, res) => {
+  res.send("API is working fine!");
+});
 app.listen(process.env.PORT, () => {
     console.log(`server is running at ${process.env.PORT}`)
 })
