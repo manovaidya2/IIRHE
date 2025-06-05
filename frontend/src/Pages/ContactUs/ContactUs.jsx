@@ -105,9 +105,9 @@ const ContactUs = () => {
                     {/* <p>lorem@ipsum.com</p> */}
                     <a
                       className="text-dark text-decoration-none"
-                      href="mailto:iirhe.org@gmail.com"
+                      href="mailto:info@iirhe.org.in"
                     >
-                      <i class="bi bi-envelope"></i> &nbsp; iirhe.org@gmail.com
+                      <i class="bi bi-envelope"></i> &nbsp; info@iirhe.org.in
                     </a>
                   </div>
                   <div className="information">
@@ -115,7 +115,8 @@ const ContactUs = () => {
                     {/* <p>123-456-789</p> */}
                     <a
                       className="text-dark text-decoration-none"
-                      href="tel:+9191 999-031-6499"
+                     href="tel:+9199990316499"
+
                     >
                       <i class="bi bi-telephone-outbound"></i> &nbsp; +91
                       999-031-6499

@@ -28,15 +28,24 @@ footer {
   color: #1e3c72;
 }
 
+
 /* Button Styles */
 .btn-custom {
+  margin-left: -15px;
   background-color: #1e3c72;
   color: white;
   border-radius: 20px;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border: none;
   text-decoration: none;
+  display: inline-block;
+  /* max-width: ; */
+  /* white-space: nowrap;        Prevents breaking but can cause overflow */
+  overflow: hidden;
+  /* text-overflow: ellipsis;   Optional: adds "..." if content overflows */
+  box-sizing: border-box;
 }
+
 
 .btn-custom-light {
   background-color: white;
@@ -45,6 +54,7 @@ footer {
   padding: 10px 20px;
   border: 2px solid #1e3c72;
   text-decoration: none;
+  
 }
 
 /* Form Styles */

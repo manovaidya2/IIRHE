@@ -65,7 +65,7 @@ const Header = () => {
             </div>
             <div className="single-info">
               <i className="bi bi-envelope"></i>
-              <a href="mailto:phd@gmail.com">phd@gmail.com</a>
+              <a href="mailto:info@iirhe.org.in">info@iirhe.org.in</a>
             </div>
           </div>
 
