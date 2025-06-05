@@ -12,7 +12,7 @@ const JoinAGuide = () => {
         // Fetch mentorship requests from the server
         const fetchRequests = async () => {
             try {
-                const response = await axios.get('https://api.iirhe.org/api/all-join-guide-requiest');
+                const response = await axios.get('https://api.iirhe.org.in/api/all-join-guide-requiest');
                 setRequests(response.data.data); // Set the fetched data to state
             } catch (err) {
                 setError('Failed to fetch requests');
@@ -39,7 +39,7 @@ const JoinAGuide = () => {
         // If the user confirms, proceed with the deletion
         if (result.isConfirmed) {
             try {
-                const response = await axios.delete(`https://api.iirhe.org/api/delete-join-guide-requiest/${id}`);
+                const response = await axios.delete(`https://api.iirhe.org.in/api/delete-join-guide-requiest/${id}`);
                 if (response.status === 200) {
                     // Filter out the deleted request from the state
                     setRequests(requests.filter(request => request._id !== id));

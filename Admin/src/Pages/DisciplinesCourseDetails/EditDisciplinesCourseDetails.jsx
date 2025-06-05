@@ -23,13 +23,13 @@ const EditDisciplinesCourseDetails = () => {
     // Fetch data for Disciplines and DisciplinesCourseName
     const fetchData = async () => {
       try {
-        const disciplinesResponse = await axios.get('https://api.iirhe.org/api/all-discipline');
-        const courseNamesResponse = await axios.get('https://api.iirhe.org/api/all-disciplines-course-make-product');
+        const disciplinesResponse = await axios.get('https://api.iirhe.org.in/api/all-discipline');
+        const courseNamesResponse = await axios.get('https://api.iirhe.org.in/api/all-disciplines-course-make-product');
         setDisciplines(disciplinesResponse.data.data);
         setCourseNames(courseNamesResponse.data.data);
 
         // Fetch the existing course details
-        const courseResponse = await axios.get(`https://api.iirhe.org/api/single-disciplines-course-details/${id}`);
+        const courseResponse = await axios.get(`https://api.iirhe.org.in/api/single-disciplines-course-details/${id}`);
         setFormData(courseResponse.data.data);
         setFilteredCourses(courseNamesResponse.data.data.filter(course => course.Disciplines._id === courseResponse.data.data.Disciplines));
       } catch (error) {
@@ -60,7 +60,7 @@ const EditDisciplinesCourseDetails = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      await axios.put(`https://api.iirhe.org/api/update-disciplines-course-details/${id}`, formData);
+      await axios.put(`https://api.iirhe.org.in/api/update-disciplines-course-details/${id}`, formData);
       toast.success("Disciplines Course Details updated successfully");
       navigate('/all-discipline-course-details'); // Redirect to list after success
     } catch (error) {

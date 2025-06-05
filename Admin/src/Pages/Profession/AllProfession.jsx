@@ -10,7 +10,7 @@ const AllProfession = () => {
 
     const getApiData = async () => {
         try {
-            const res = await axios.get("https://api.iirhe.org/api/all-profession-guide"); // Update the endpoint
+            const res = await axios.get("https://api.iirhe.org.in/api/all-profession-guide"); // Update the endpoint
             if (res.status === 200) {
                 setProfessionals(res.data.data);
             }
@@ -31,7 +31,7 @@ const AllProfession = () => {
             });
 
             if (result.isConfirmed) {
-                const res = await axios.delete(`https://api.iirhe.org/api/delete-profession-guide/${id}`);
+                const res = await axios.delete(`https://api.iirhe.org.in/api/delete-profession-guide/${id}`);
                 if (res.status === 200) {
                     toast.success("Professional deleted successfully.");
                     getApiData(); // Refresh the professionals list
@@ -88,7 +88,7 @@ const AllProfession = () => {
                                     <td>{item.university}</td>
                                     <td>
                                         <img
-                                            src={`https://api.iirhe.org/${item.image}`}
+                                            src={`https://api.iirhe.org.in/${item.image}`}
                                             alt={item.name}
                                             style={{ width: "50px", height: "50px" }}
                                         />

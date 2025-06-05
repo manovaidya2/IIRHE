@@ -14,7 +14,7 @@ const AllDisciplinesCourse = () => {
     useEffect(() => {
         const fetchDisciplineCourses = async () => {
             try {
-                const response = await axios.get('https://api.iirhe.org/api/all-disciplines-course'); // Adjust endpoint
+                const response = await axios.get('https://api.iirhe.org.in/api/all-disciplines-course'); // Adjust endpoint
                 setDisciplineCourses(response.data.data);
                 setIsLoading(false);
             } catch (error) {
@@ -41,7 +41,7 @@ const AllDisciplinesCourse = () => {
 
         if (confirm.isConfirmed) {
             try {
-                await axios.delete(`https://api.iirhe.org/api/delete-disciplines-course/${id}`); // Adjust endpoint
+                await axios.delete(`https://api.iirhe.org.in/api/delete-disciplines-course/${id}`); // Adjust endpoint
                 toast.success('Discipline course deleted successfully!');
                 setDisciplineCourses(disciplineCourses.filter(course => course._id !== id));
             } catch (error) {

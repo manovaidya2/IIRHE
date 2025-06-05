@@ -13,7 +13,7 @@ const AllUniversity = () => {
         // Fetch the universities data from the API
         const fetchUniversities = async () => {
             try {
-                const response = await axios.get('https://api.iirhe.org/api/all-universities');  // Adjust the endpoint as needed
+                const response = await axios.get('https://api.iirhe.org.in/api/all-universities');  // Adjust the endpoint as needed
                 setUniversities(response.data.data);  // Set the fetched data
             } catch (error) {
                 toast.error("Failed to fetch universities.");
@@ -38,7 +38,7 @@ const AllUniversity = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    await axios.delete(`https://api.iirhe.org/api/delete-universities/${id}`);
+                    await axios.delete(`https://api.iirhe.org.in/api/delete-universities/${id}`);
                     setUniversities(universities.filter(university => university._id !== id));
                     Swal.fire(
                         'Deleted!',

@@ -36,7 +36,7 @@ const AddDisciplines = () => {
         formDataToSend.append('DisciplinesStatus', formData.DisciplinesStatus);
 
         try {
-            const response = await axios.post('https://api.iirhe.org/api/add-discipline', formDataToSend, {
+            const response = await axios.post('https://api.iirhe.org.in/api/add-discipline', formDataToSend, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

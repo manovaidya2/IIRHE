@@ -11,13 +11,13 @@ const FocusAreaSlider = () => {
   // Fetch API data using axios
   useEffect(() => {
     axios
-      .get("https://api.iirhe.org/api/all-discipline")
+      .get("https://api.iirhe.org.in/api/all-discipline")
       .then((response) => {
         if (response.status === 200) {
           // Map the API data into the format we need
           const areas = response.data.data.map((item) => ({
             name: item.DisciplinesName,
-            image: `https://api.iirhe.org/${item.DisciplinesLogo}`,
+            image: `https://api.iirhe.org.in/${item.DisciplinesLogo}`,
           }));
           setFocusAreas(areas);
         }

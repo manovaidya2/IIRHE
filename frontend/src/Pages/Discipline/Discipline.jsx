@@ -8,7 +8,7 @@ const Discipline = () => {
 
   const getapiData = async () => {
     try {
-      const res = await axios.get("https://api.iirhe.org/api/all-discipline")
+      const res = await axios.get("https://api.iirhe.org.in/api/all-discipline")
       if (res.status === 200) {
         setFocusAreas(res.data.data)
       }
@@ -50,11 +50,11 @@ const Discipline = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.iirhe.org/disciplines"
+          content="https://www.iirhe.org.in/disciplines"
         />
         <meta
           property="og:image"
-          content="https://www.iirhe.org/images/og-discipline.jpg" // Example image URL for social media sharing
+          content="https://www.iirhe.org.in/images/og-discipline.jpg" // Example image URL for social media sharing
         />
       </Helmet>
     <section className="disciplines">
@@ -70,7 +70,7 @@ const Discipline = () => {
                   <Link to={`/courses/course-overview/${area.DisciplinesName}`} className="text-decoration-none">
                     <div className="focus-area-tile text-center p-3 shadow-sm bg-white rounded">
                       <img
-                        src={`https://api.iirhe.org/${area.DisciplinesLogo}`}
+                        src={`https://api.iirhe.org.in/${area.DisciplinesLogo}`}
                         alt={area.DisciplinesName}
                         className="img-fluid mb-2"
                       />

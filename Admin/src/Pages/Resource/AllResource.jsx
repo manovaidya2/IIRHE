@@ -10,7 +10,7 @@ const AllResource = () => {
     useEffect(() => {
         const fetchResources = async () => {
             try {
-                const response = await axios.get('https://api.iirhe.org/api/get-resources'); // Get resources from your backend API
+                const response = await axios.get('https://api.iirhe.org.in/api/get-resources'); // Get resources from your backend API
                 setResources(response.data.data); // Store resources in the state
             } catch (error) {
                 console.error("Error fetching resources:", error);
@@ -36,7 +36,7 @@ const AllResource = () => {
         if (result.isConfirmed) {
             try {
                 // Make the delete request
-                await axios.delete(`https://api.iirhe.org/api/delete-resources/${id}`);
+                await axios.delete(`https://api.iirhe.org.in/api/delete-resources/${id}`);
 
                 // Update the state to remove the deleted resource
                 setResources(resources.filter(resource => resource._id !== id));
@@ -99,7 +99,7 @@ const AllResource = () => {
                                     <td>{index + 1}</td>
                                     <td>{resource.ResourcesName}</td>
                                     <td>
-                                        <a href={`https://api.iirhe.org/${resource.ResourcesPdf}`} target="_blank" rel="noopener noreferrer">
+                                        <a href={`https://api.iirhe.org.in/${resource.ResourcesPdf}`} target="_blank" rel="noopener noreferrer">
                                             View PDF
                                         </a>
                                     </td>

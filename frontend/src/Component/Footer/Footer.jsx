@@ -17,7 +17,7 @@ const Footer = () => {
   const postData = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post("https://api.iirhe.org/api/send-reachus", data)
+      const res = await axios.post("https://api.iirhe.org.in/api/send-reachus", data)
       if (res.status === 201) {
         toast.success("Inquery Send Successfully")
         setData({

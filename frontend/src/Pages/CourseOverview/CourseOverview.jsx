@@ -14,7 +14,7 @@ const SciencePrograms = () => {
   const getApiData = async () => {
     try {
       const res = await axios.get(
-        `https://api.iirhe.org/api/all-disciplines-course-by-disciplinename/${displine}`
+        `https://api.iirhe.org.in/api/all-disciplines-course-by-disciplinename/${displine}`
       );
       setPrograms(res.data.data);
     } catch (error) {
@@ -26,7 +26,7 @@ const SciencePrograms = () => {
   const fetchCourseDetails = async (programName) => {
     try {
       const res = await axios.get(
-        `https://api.iirhe.org/api/all-disciplines-course-details-by-course-name/${encodeURIComponent(
+        `https://api.iirhe.org.in/api/all-disciplines-course-details-by-course-name/${encodeURIComponent(
           programName
         )}`
       );
@@ -83,11 +83,11 @@ const SciencePrograms = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://www.iirhe.org/programs/${displine}`}
+          content={`https://www.iirhe.org.in/programs/${displine}`}
         />
         <meta
           property="og:image"
-          content="https://www.iirhe.org/images/og-image.jpg" // Example image URL for social media sharing
+          content="https://www.iirhe.org.in/images/og-image.jpg" // Example image URL for social media sharing
         />
       </Helmet>
     <div className="science-programs-container">

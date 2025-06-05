@@ -11,7 +11,7 @@ const AllDisciplines = () => {
     // Fetch disciplines data
     const fetchDisciplines = async () => {
         try {
-            const response = await axios.get('https://api.iirhe.org/api/all-discipline'); // Ensure this is the correct endpoint
+            const response = await axios.get('https://api.iirhe.org.in/api/all-discipline'); // Ensure this is the correct endpoint
             setDisciplines(response.data.data);
         } catch (error) {
             console.error('Error fetching disciplines:', error);
@@ -33,7 +33,7 @@ const AllDisciplines = () => {
             });
 
             if (result.isConfirmed) {
-                const response = await axios.delete(`https://api.iirhe.org/api/delete-discipline/${id}`); // Ensure this is the correct delete endpoint
+                const response = await axios.delete(`https://api.iirhe.org.in/api/delete-discipline/${id}`); // Ensure this is the correct delete endpoint
                 if (response.data.success) {
                     toast.success(response.data.message);
                     fetchDisciplines(); // Refresh the list
@@ -47,7 +47,7 @@ const AllDisciplines = () => {
 
     const updateStatus = async (id, newStatus) => {
         try {
-            const response = await axios.put(`https://api.iirhe.org/api/update-discipline/${id}`, {
+            const response = await axios.put(`https://api.iirhe.org.in/api/update-discipline/${id}`, {
                 DisciplinesStatus: newStatus,
             });
             if (response.data.success) {
@@ -95,7 +95,7 @@ const AllDisciplines = () => {
                                 <th scope="row">{index + 1}</th>
                                 <td>{discipline.DisciplinesName}</td>
                                 <td>
-                                    <img src={`https://api.iirhe.org/${discipline.DisciplinesLogo}`} alt={discipline.DisciplinesName} width="50" height="50" />
+                                    <img src={`https://api.iirhe.org.in/${discipline.DisciplinesLogo}`} alt={discipline.DisciplinesName} width="50" height="50" />
                                 </td>
                                 <td>
                                     <input

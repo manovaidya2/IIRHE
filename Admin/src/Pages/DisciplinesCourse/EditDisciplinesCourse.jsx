@@ -18,7 +18,7 @@ const EditDisciplinesCourse = () => {
     useEffect(() => {
         const fetchDisciplines = async () => {
             try {
-                const response = await axios.get('https://api.iirhe.org/api/all-discipline'); // Adjust endpoint
+                const response = await axios.get('https://api.iirhe.org.in/api/all-discipline'); // Adjust endpoint
                 setDisciplines(response.data.data);
             } catch (error) {
                 console.error('Error fetching disciplines:', error);
@@ -32,7 +32,7 @@ const EditDisciplinesCourse = () => {
     useEffect(() => {
         const fetchCourse = async () => {
             try {
-                const response = await axios.get(`https://api.iirhe.org/api/single-disciplines-course/${id}`);
+                const response = await axios.get(`https://api.iirhe.org.in/api/single-disciplines-course/${id}`);
                 setFormData({
                     DisciplinesCourseName: response.data.data.DisciplinesCourseName,
                     Disciplines: response.data.data.Disciplines._id, // Ensure this is set correctly
@@ -54,7 +54,7 @@ const EditDisciplinesCourse = () => {
         setBtnLoading(true);
 
         try {
-            await axios.put(`https://api.iirhe.org/api/update-disciplines-course/${id}`, formData); // Adjust endpoint
+            await axios.put(`https://api.iirhe.org.in/api/update-disciplines-course/${id}`, formData); // Adjust endpoint
             toast.success('Discipline course updated successfully!');
             navigate('/all-disciplines-course');
         } catch (error) {

@@ -32,7 +32,7 @@ const MentorshipRequest = () => {
 
     try {
       const response = await axios.post(
-        "https://api.iirhe.org/api/submit-mentorship-request",
+        "https://api.iirhe.org.in/api/submit-mentorship-request",
         formData
       );
       if (response.status === 201) {

@@ -19,7 +19,7 @@ const Guides = () => {
     const fetchGuides = async () => {
       try {
         const response = await axios.get(
-          "https://api.iirhe.org/api/all-profession-guide"
+          "https://api.iirhe.org.in/api/all-profession-guide"
         );
         if (response.data.success) {
           setGuides(response.data.data); // Set the fetched data to state
@@ -70,7 +70,7 @@ const Guides = () => {
                     <div className="col-md-4">
                       {/* Dynamically render guide image */}
                       <img
-                        src={`https://api.iirhe.org/${guide.image}`}
+                        src={`https://api.iirhe.org.in/${guide.image}`}
                         className="w-100"
                         alt={guide.name}
                       />

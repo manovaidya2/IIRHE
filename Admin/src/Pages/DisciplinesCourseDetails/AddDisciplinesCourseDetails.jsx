@@ -22,8 +22,8 @@ const AddDisciplinesCourseDetails = () => {
         // Fetch data for Disciplines and DisciplinesCourseName
         const fetchData = async () => {
             try {
-                const disciplinesResponse = await axios.get('https://api.iirhe.org/api/all-discipline');
-                const courseNamesResponse = await axios.get('https://api.iirhe.org/api/all-disciplines-course-make-product');
+                const disciplinesResponse = await axios.get('https://api.iirhe.org.in/api/all-discipline');
+                const courseNamesResponse = await axios.get('https://api.iirhe.org.in/api/all-disciplines-course-make-product');
                 setDisciplines(disciplinesResponse.data.data);
                 setCourseNames(courseNamesResponse.data.data);
             } catch (error) {
@@ -54,7 +54,7 @@ const AddDisciplinesCourseDetails = () => {
         e.preventDefault();
         setIsLoading(true);
         try {
-            await axios.post('https://api.iirhe.org/api/add-disciplines-course-details', formData);
+            await axios.post('https://api.iirhe.org.in/api/add-disciplines-course-details', formData);
             toast.success("Disciplines Course Details added successfully");
             navigate("/all-discipline-course-details")
         } catch (error) {

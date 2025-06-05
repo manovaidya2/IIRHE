@@ -18,7 +18,7 @@ const EditBanner = () => {
     useEffect(() => {
         const fetchBannerData = async () => {
             try {
-                const res = await axios.get(`https://api.iirhe.org/api/single-banner/${id}`);
+                const res = await axios.get(`https://api.iirhe.org.in/api/single-banner/${id}`);
                 if (res.status === 200) {
                     setBanner(res.data.data);
                 }
@@ -54,7 +54,7 @@ const EditBanner = () => {
         }
 
         try {
-            const result = await axios.put(`https://api.iirhe.org/api/update-banner/${id}`, formData, {
+            const result = await axios.put(`https://api.iirhe.org.in/api/update-banner/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -119,7 +119,7 @@ const EditBanner = () => {
                     <div className="col-4">
                         {banner.bannerImage && (
                             <img
-                                src={`https://api.iirhe.org/${banner.bannerImage}`}
+                                src={`https://api.iirhe.org.in/${banner.bannerImage}`}
                                 alt="Category Preview"
                                 style={{ width: '100%', height: 'auto' }}
                             />

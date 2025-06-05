@@ -50,7 +50,7 @@ const MentorOnboarding = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://api.iirhe.org/api/submit-onboard-mentor", formData);
+      const res = await axios.post("https://api.iirhe.org.in/api/submit-onboard-mentor", formData);
       if (res.status === 201) {
         Swal.fire({
           title: "Success!",

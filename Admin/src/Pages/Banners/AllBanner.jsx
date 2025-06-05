@@ -10,7 +10,7 @@ const AllBanner = () => {
 
     const getApiData = async () => {
         try {
-            const res = await axios.get("https://api.iirhe.org/api/all-banner")
+            const res = await axios.get("https://api.iirhe.org.in/api/all-banner")
             console.log(res)
             if (res.status === 200) {
                 setBanner(res.data.data)
@@ -32,7 +32,7 @@ const AllBanner = () => {
             });
 
             if (result.isConfirmed) {
-                const res = await axios.delete(`https://api.iirhe.org/api/delete-banner/${id}`);
+                const res = await axios.delete(`https://api.iirhe.org.in/api/delete-banner/${id}`);
                 if (res.status === 200) {
                     toast.success("Banner deleted successfully.");
                     getApiData(); // Refresh the banner list
@@ -48,7 +48,7 @@ const AllBanner = () => {
 
     const handleCheckboxChange = async (id, status) => {
         try {
-            const res = await axios.put(`https://api.iirhe.org/api/update-banner/${id}`, { activeStatus: !status });
+            const res = await axios.put(`https://api.iirhe.org.in/api/update-banner/${id}`, { activeStatus: !status });
             if (res.status === 200) {
                 toast.success("Status updated successfully.");
                 getApiData(); // Refresh the banner list
@@ -93,7 +93,7 @@ const AllBanner = () => {
                                     <td>{item.bannerName}</td>
                                     <td>
                                         <img
-                                            src={`https://api.iirhe.org/${item.bannerImage}`}
+                                            src={`https://api.iirhe.org.in/${item.bannerImage}`}
                                             alt={item.bannerName}
                                             style={{ width: "100px", height: "auto" }}
                                         />

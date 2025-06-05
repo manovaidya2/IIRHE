@@ -16,7 +16,7 @@ const AddMultiUniversities = () => {
     const fetchUniversityZones = async () => {
       try {
         const response = await axios.get(
-          "https://api.iirhe.org/api/all-universities"
+          "https://api.iirhe.org.in/api/all-universities"
         ); // Backend endpoint for UniversityZone
         setAllUniversityZones(response.data.data);
       } catch (error) {
@@ -64,7 +64,7 @@ const AddMultiUniversities = () => {
 
     try {
       const response = await axios.post(
-        "https://api.iirhe.org/api/add-multi-universities",
+        "https://api.iirhe.org.in/api/add-multi-universities",
         {
           UniversityZone: universityZone,
           Universities: universities,

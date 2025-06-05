@@ -38,7 +38,7 @@ const AddBanner = () => {
         formData.append("activeStatus", data.activeStatus);
 
         try {
-            await axios.post('https://api.iirhe.org/api/add-banner', formData, {
+            await axios.post('https://api.iirhe.org.in/api/add-banner', formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
             toast.success("Banner added successfully!");

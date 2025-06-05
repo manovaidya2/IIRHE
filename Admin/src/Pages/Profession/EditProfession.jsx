@@ -21,7 +21,7 @@ const EditProfession = () => {
     useEffect(() => {
         const fetchProfessionData = async () => {
             try {
-                const res = await axios.get(`https://api.iirhe.org/api/single-profession-guide/${id}`);
+                const res = await axios.get(`https://api.iirhe.org.in/api/single-profession-guide/${id}`);
                 if (res.status === 200) {
                     setData({
                         ...res.data.data,
@@ -63,7 +63,7 @@ const EditProfession = () => {
         }
 
         try {
-            const result = await axios.put(`https://api.iirhe.org/api/update-profession-guide/${id}`, formData, {
+            const result = await axios.put(`https://api.iirhe.org.in/api/update-profession-guide/${id}`, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
 
@@ -173,7 +173,7 @@ const EditProfession = () => {
                     <div className="col-4">
                         {data.image && (
                             <img
-                                src={`https://api.iirhe.org/${data.image}`}
+                                src={`https://api.iirhe.org.in/${data.image}`}
                                 alt="Profile Preview"
                                 style={{ width: '100%', height: 'auto' }}
                             />

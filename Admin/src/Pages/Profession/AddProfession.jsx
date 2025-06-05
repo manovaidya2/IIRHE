@@ -44,7 +44,7 @@ const AddProfession = () => {
         formData.append("image", data.image);
 
         try {
-            await axios.post('https://api.iirhe.org/api/add-profession-guide', formData, {
+            await axios.post('https://api.iirhe.org.in/api/add-profession-guide', formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
             toast.success("Professional profile added successfully!");

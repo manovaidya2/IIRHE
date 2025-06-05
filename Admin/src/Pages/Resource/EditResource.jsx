@@ -16,7 +16,7 @@ const EditResource = () => {
     useEffect(() => {
         const fetchResource = async () => {
             try {
-                const response = await axios.get(`https://api.iirhe.org/api/single-resources/${id}`);
+                const response = await axios.get(`https://api.iirhe.org.in/api/single-resources/${id}`);
                 const { ResourcesName, ResourcesPdf } = response.data.data;
                 setResourceName(ResourcesName);
                 setExistingPdf(ResourcesPdf); // Store the existing PDF URL/path
@@ -59,7 +59,7 @@ const EditResource = () => {
 
         try {
             // Make a PUT request to update the resource
-            const response = await axios.put(`https://api.iirhe.org/api/update-resources/${id}`, formData, {
+            const response = await axios.put(`https://api.iirhe.org.in/api/update-resources/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -113,7 +113,7 @@ const EditResource = () => {
                     {/* Display current PDF if available */}
                     {existingPdf && (
                         <div className="col-md-12">
-                            <p>Current Resource PDF: <a href={`https://api.iirhe.org/${existingPdf}`} target="_blank" rel="noopener noreferrer">{existingPdf}</a></p>
+                            <p>Current Resource PDF: <a href={`https://api.iirhe.org.in/${existingPdf}`} target="_blank" rel="noopener noreferrer">{existingPdf}</a></p>
                         </div>
                     )}
 

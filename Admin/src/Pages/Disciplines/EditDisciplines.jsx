@@ -18,7 +18,7 @@ const EditDisciplines = () => {
     useEffect(() => {
         const fetchDiscipline = async () => {
             try {
-                const response = await axios.get(`https://api.iirhe.org/api/single-discipline/${id}`);
+                const response = await axios.get(`https://api.iirhe.org.in/api/single-discipline/${id}`);
                 setDiscipline(response.data.data);
             } catch (error) {
                 console.error('Error fetching discipline:', error);
@@ -42,7 +42,7 @@ const EditDisciplines = () => {
         }
 
         try {
-            const response = await axios.put(`https://api.iirhe.org/api/update-discipline/${id}`, formData, {
+            const response = await axios.put(`https://api.iirhe.org.in/api/update-discipline/${id}`, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
 
@@ -103,7 +103,7 @@ const EditDisciplines = () => {
                         />
                         {discipline.DisciplinesLogo && typeof discipline.DisciplinesLogo === 'string' ? (
                             <img
-                                src={`https://api.iirhe.org/${discipline.DisciplinesLogo}`}
+                                src={`https://api.iirhe.org.in/${discipline.DisciplinesLogo}`}
                                 alt="Discipline Logo"
                                 width="50"
                                 height="50"

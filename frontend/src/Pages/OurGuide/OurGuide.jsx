@@ -55,7 +55,7 @@ const OurGuide = () => {
 
     try {
       const response = await axios.post(
-        "https://api.iirhe.org/api/send-guide-contact",
+        "https://api.iirhe.org.in/api/send-guide-contact",
         {
           ...formData,
           guideId: selectedGuide?._id, // Sending the selected guide's ID
@@ -78,7 +78,7 @@ const OurGuide = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://api.iirhe.org/api/send-join-guide-requiest",
+        "https://api.iirhe.org.in/api/send-join-guide-requiest",
         data
       );
       if (res.status === 201) {
@@ -104,7 +104,7 @@ const OurGuide = () => {
     const fetchGuideData = async () => {
       try {
         const response = await axios.get(
-          "https://api.iirhe.org/api/all-profession-guide"
+          "https://api.iirhe.org.in/api/all-profession-guide"
         );
         setGuideData(response.data.data);
         setIsLoading(false);
@@ -162,7 +162,7 @@ const OurGuide = () => {
                 <div className="guideCard shadow p-3 rounded">
                   <div className="profilePicture mx-auto mb-3">
                     <img
-                      src={`https://api.iirhe.org/${guide.image}`}
+                      src={`https://api.iirhe.org.in/${guide.image}`}
                       alt={guide.name}
                       className="img-fluid rounded"
                     />

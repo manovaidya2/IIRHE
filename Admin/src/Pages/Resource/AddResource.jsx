@@ -36,7 +36,7 @@ const AddResource = () => {
 
         try {
             // Make a POST request to create a new resource
-            const response = await axios.post('https://api.iirhe.org/api/add-resources', formData, {
+            const response = await axios.post('https://api.iirhe.org.in/api/add-resources', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

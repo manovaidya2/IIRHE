@@ -10,7 +10,7 @@ const AllDisciplinesCourseDetails = () => {
 
     const getApiData = async () => {
         try {
-            const res = await axios.get("https://api.iirhe.org/api/all-disciplines-course-details");
+            const res = await axios.get("https://api.iirhe.org.in/api/all-disciplines-course-details");
             setData(res.data.data); // Ensure the `data` field from the API matches this structure
         } catch (error) {
             console.error(error);
@@ -34,7 +34,7 @@ const AllDisciplinesCourseDetails = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    await axios.delete(`https://api.iirhe.org/api/delete-disciplines-course-details/${id}`);
+                    await axios.delete(`https://api.iirhe.org.in/api/delete-disciplines-course-details/${id}`);
                     toast.success("Deleted successfully");
                     getApiData(); // Refresh the data
                 } catch (error) {

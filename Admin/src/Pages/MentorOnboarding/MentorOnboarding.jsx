@@ -12,7 +12,7 @@ const MentorOnboarding = () => {
         // Fetch mentorship requests from the server
         const fetchRequests = async () => {
             try {
-                const response = await axios.get('https://api.iirhe.org/api/all-onboard-mentor');
+                const response = await axios.get('https://api.iirhe.org.in/api/all-onboard-mentor');
                 setRequests(response.data); // Set the fetched data to state
             } catch (err) {
                 setError('Failed to fetch requests');
@@ -39,7 +39,7 @@ const MentorOnboarding = () => {
         // If the user confirms, proceed with the deletion
         if (result.isConfirmed) {
             try {
-                const response = await axios.delete(`https://api.iirhe.org/api/delete-onboard-mentor/${id}`);
+                const response = await axios.delete(`https://api.iirhe.org.in/api/delete-onboard-mentor/${id}`);
                 if (response.status === 200) {
                     // Filter out the deleted request from the state
                     setRequests(requests.filter(request => request._id !== id));

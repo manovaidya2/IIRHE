@@ -14,7 +14,7 @@ const EditUniversity = () => {
         // Fetch the university details by ID when the component mounts
         const fetchUniversity = async () => {
             try {
-                const response = await axios.get(`https://api.iirhe.org/api/single-universities/${id}`);
+                const response = await axios.get(`https://api.iirhe.org.in/api/single-universities/${id}`);
                 setUniversity(response.data.data);
             } catch (error) {
                 toast.error("Failed to load university data.");
@@ -36,7 +36,7 @@ const EditUniversity = () => {
         setIsLoading(true);
         try {
             // Sending PUT request to update the university
-            const response = await axios.put(`https://api.iirhe.org/api/update-universities/${id}`, { UniversityZone: university.UniversityZone });
+            const response = await axios.put(`https://api.iirhe.org.in/api/update-universities/${id}`, { UniversityZone: university.UniversityZone });
 
             // Show success message
             toast.success("University updated successfully!");

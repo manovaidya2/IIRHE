@@ -11,7 +11,7 @@ const AllMultiUniversity = () => {
     const fetchAllUniversities = async () => {
       try {
         const response = await axios.get(
-          "https://api.iirhe.org/api/all-multi-universities"
+          "https://api.iirhe.org.in/api/all-multi-universities"
         );
         setAllUniversities(response.data);
         setIsLoading(false);
@@ -34,7 +34,7 @@ const AllMultiUniversity = () => {
 
     try {
       const response = await axios.delete(
-        `https://api.iirhe.org/api/delete-multi-universities/${id}`
+        `https://api.iirhe.org.in/api/delete-multi-universities/${id}`
       );
       if (response.status === 200) {
         toast.success("University deleted successfully");

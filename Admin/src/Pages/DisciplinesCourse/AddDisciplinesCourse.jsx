@@ -17,7 +17,7 @@ const AddDisciplinesCourse = () => {
     useEffect(() => {
         const fetchDisciplines = async () => {
             try {
-                const response = await axios.get('https://api.iirhe.org/api/all-discipline'); // Adjust endpoint as needed
+                const response = await axios.get('https://api.iirhe.org.in/api/all-discipline'); // Adjust endpoint as needed
                 setDisciplines(response.data.data);
             } catch (error) {
                 console.error('Error fetching disciplines:', error);
@@ -42,7 +42,7 @@ const AddDisciplinesCourse = () => {
         setIsLoading(true);
 
         try {
-            const response = await axios.post('https://api.iirhe.org/api/add-disciplines-course', formData); // Adjust endpoint as needed
+            const response = await axios.post('https://api.iirhe.org.in/api/add-disciplines-course', formData); // Adjust endpoint as needed
             if (response.data.success) {
                 toast.success('Discipline course added successfully!');
                 navigate('/all-disciplines-course'); // Redirect to all courses list
