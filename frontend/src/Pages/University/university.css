@@ -14,7 +14,7 @@
   background-size: cover;
   background-position: center;
   padding: 3rem 0rem;
-}
+} 
 
 .easwest {
   background-image: url("../../Images/universityBackgroundImage2.png");
@@ -36,7 +36,7 @@
 }
 
 .eastIndiaCard {
-  background: #f3f4f2db;
+  background: #e5f3d8db;
   padding: 1rem;
 }
 
@@ -44,14 +44,14 @@
   padding: 0;
 }
 
-.eastIndiaCard p {
-  background: #095773; /* Background color for list items */
-  margin-bottom: 2rem;
+/* .eastIndiaCard p {
+  background: #8abdf0; /* Background color for list items */
+  /* margin-bottom: 2rem;
   color: white;
   border-radius: 1rem;
   padding: 1rem;
   list-style-position: inside; /* Ensures numbers are inside the li background */
-}
+ */ */
 
 .eastIndiaCard ol li::marker {
   font-weight: bold; /* Make numbers bold */
@@ -63,6 +63,7 @@
   padding: 5px 10px;
   border-radius: 8px;
   text-align: center;
+ 
 }
 .viewfulllist:hover {
   border: 1px solid var(--color-blue);

@@ -92,11 +92,12 @@ console.log("zones",zones);
                 <div className="eastIndiaCard">
                   <h2 className="mb-4">{zone.UniversityZone}</h2>
                  
-                  <p>
-  {new DOMParser()
-    .parseFromString(zone.Universities, "text/html")
-    .body.textContent}
-</p>
+               <div
+  className="content-box"
+  dangerouslySetInnerHTML={{ __html: zone.Universities }}
+></div>
+              
+
                   {zone.Link && (
                     <a
                       href={zone.Link}
