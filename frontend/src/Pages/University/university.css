@@ -43,6 +43,42 @@
 .eastIndiaCard ol {
   padding: 0;
 }
+.documentShadow {
+  position: relative;
+  cursor: text;
+}
+
+.search-input-container {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.documentShadow:hover .search-input-container,
+.search-input-container.active {
+  width: 300px;
+  margin-right: -10px;
+}
+
+.search-input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  margin-left: 40px;
+}
+
+.search-icon {
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: -25px;
+}
+
+
 
 /* .eastIndiaCard p {
   background: #8abdf0; /* Background color for list items */

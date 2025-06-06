@@ -25,7 +25,7 @@
 .search-icon {
   position: absolute;
   top: 50%;
-  left: 20px; /* Adjust this value as needed */
+  left: 50px; /* Adjust this value as needed */
   transform: translateY(-50%);
   color: #aaa; /* Change color if needed */
 }
