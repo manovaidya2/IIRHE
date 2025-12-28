@@ -97,9 +97,7 @@ const Header = () => {
                 <h3 style={{ color: "#153067" }}>
                   International Institute of Research and Higher Education
                 </h3>
-                {/* <h4 style={{ color: "#153067" }}>
-                  भारतीय अनुसंधान एवं उच्च शिक्षा संस्थान{" "}
-                </h4> */}
+              
               </div>
             </div>
 
