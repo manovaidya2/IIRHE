@@ -161,8 +161,8 @@ import { Helmet } from "react-helmet";
 const University = () => {
   const [zones, setZones] = useState([]);
   const [showMore, setShowMore] = useState({});
-  const [zoneList, setZoneList] = useState([]); // Changed from universityList to zoneList
-  const [selectedZone, setSelectedZone] = useState(""); // Changed from selectedUniversity to selectedZone
+  const [zoneList, setZoneList] = useState([]); 
+  const [selectedZone, setSelectedZone] = useState(""); 
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });

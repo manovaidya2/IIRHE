@@ -76,7 +76,7 @@ const Hero = () => {
     }
   };
 
-  // Filter disciplines based on search term
+
   const filteredDisciplines = disciplines.filter((discipline) =>
     discipline.DisciplinesName.toLowerCase().includes(searchTerm.toLowerCase())
   );
