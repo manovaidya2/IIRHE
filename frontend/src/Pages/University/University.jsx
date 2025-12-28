@@ -151,7 +151,7 @@
 // export default University;
 
 
-
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import search from "../../Images/search.png";
@@ -322,16 +322,24 @@ const University = () => {
                         className="viewfulllist"
                         style={{ margin: "0px 4px" }}
                       >
-                        View Link
+                        Visit University
                       </a>
-                    )}
 
-                    <button
+                      
+                    )}
+<Link
+  to="/contact"  // Your contact page route
+  className="viewfulllist"
+  style={{ margin: "0px 4px" }}
+>
+  Contact Us
+</Link>
+                    {/* <button
                       className="viewfulllist"
                       onClick={() => toggleVisibility(zone.UniversityZone)}
                     >
                       {showMore[zone.UniversityZone] ? "Show Less" : "View Full List"}
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))

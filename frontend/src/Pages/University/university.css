@@ -16,6 +16,25 @@
   padding: 3rem 0rem;
 } 
 
+.viewfulllist {
+  margin: 0 4px;
+  padding: 6px 12px;
+  background-color: #4CAF50; /* Green */
+  color: rgb(0, 0, 0) !important;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.viewfulllist:hover {
+  background-color: #45a049;
+  
+}
+
+
+
 .easwest {
   background-image: url("../../Images/universityBackgroundImage2.png");
   height: 100%;

@@ -95,11 +95,11 @@ const Header = () => {
               </Link>
               <div className="poster text-center">
                 <h3 style={{ color: "#153067" }}>
-                  Indian Institute of Research and Higher Education
+                  International Institute of Research and Higher Education
                 </h3>
-                <h4 style={{ color: "#153067" }}>
+                {/* <h4 style={{ color: "#153067" }}>
                   भारतीय अनुसंधान एवं उच्च शिक्षा संस्थान{" "}
-                </h4>
+                </h4> */}
               </div>
             </div>
 

@@ -24,12 +24,14 @@ import MentorOnboarding from "./Pages/Forms/MentorOnboarding";
 import MentorshipRequest from "./Pages/Forms/MentorshipRequest";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import { Toaster } from "react-hot-toast";
+import MetaManager from "./MetaManager";
 
 const App = () => {
   return (
     <>
       <Toaster />
       <BrowserRouter>
+      <MetaManager/>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -57,6 +59,7 @@ const App = () => {
           {/* forms end */}
         </Routes>
         <Footer />
+        
       </BrowserRouter>
     </>
   );
